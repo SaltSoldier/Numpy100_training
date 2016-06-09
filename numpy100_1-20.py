@@ -40,7 +40,7 @@ Z = np.arange(10,50)
 print(Z)
 print("\n")
 
-#7 49までのベクトルを作成し，それを逆順にする
+#7 0から49までのベクトルを作成し，それを逆順にする
 print("No.7 49までのベクトルを作成し，それを逆順にする")
 Z = np.arange(50)
 Z = Z[::-1]
@@ -53,10 +53,10 @@ Z = np.arange(9).reshape(3,3)
 print(Z)
 print("\n")
 
-#9 非0要素の列挙??
-print("No.9 非0要素の列挙??")
-#nz = np.nonzero([1,2,0,0,4,0])
-print(np.nonzero([1,2,0,0,4,0]))
+#9 非0要素のインデックス配列を返す
+print("No.9 非0要素のインデックス配列を返す")
+nz = np.nonzero([1,2,0,0,4,0])
+print(nz)
 print("\n")
 
 #10 3*3の単位行列の出力
@@ -115,19 +115,20 @@ Z[::2,1::2] = 1
 print(Z)
 print("\n")
 
-#18 
-print("No.18")
+#18 6*7*8の行列から100番目の要素を取り出してくる(8*7の行列が6個)
+print("No.186*7*8の行列から100番目の要素を取り出してくる(8*7の行列が6個)")
 print(np.unravel_index(100,(6,7,8)))
+print(Z)
 print("\n")
 
-#
-print("No.19 ")
+#19 [(0,1),(1,0)]の行列を4*4回生成
+print("No.19 [(0,1),(1,0)]の行列を4*4回生成")
 Z = np.tile( np.array([[0,1],[1,0]]), (4,4))
 print(Z)
 print("\n")
 
-#
-print("No.20 ")
+# 5*5のランダムな行列を正規化
+print("No.20 5*5のランダムな行列を正規化")
 Z = np.random.random((5,5))
 Zmax, Zmin = Z.max(), Z.min()
 Z = (Z - Zmin)/(Zmax - Zmin)
